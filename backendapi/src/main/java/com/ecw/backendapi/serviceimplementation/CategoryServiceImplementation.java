@@ -1,6 +1,7 @@
 package com.ecw.backendapi.serviceimplementation;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,23 @@ public class CategoryServiceImplementation implements CategoryService {
 	public List<Category> listOfCategory() {
 		List<Category> all = this.categoryRepository.findAll();
 		return all;
+	}
+
+	@Override
+	public boolean removeCategory(int id) {
+		if(this.categoryRepository.existsByCategoryid(id)) {
+			Category existsCategory = this.categoryRepository.findById(id).get();
+			existsCategory.setIsactive(false);
+			this.categoryRepository.save(existsCategory);
+			return true;
+			
+		}
+		return false;
+	}
+	@Override
+	public List<Category> findCategoryIsActive(boolean IsActive) {
+		List<Category> byIsactive = this.categoryRepository.findByIsactive(IsActive);
+		return byIsactive;
 	}
 
 }
