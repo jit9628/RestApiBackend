@@ -104,7 +104,7 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
 
         http.csrf(csrf -> csrf.disable()).exceptionHandling(handling -> handling.authenticationEntryPoint(unauthorizedHandler))
                 .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)).authorizeRequests(requests -> requests
-                .requestMatchers("/api/auth/**","/api/auth/signup","/api/category/**")
+                .requestMatchers("/api/auth/**","/api/auth/signup","/api/category/**","/api/product/**")
                 .permitAll().anyRequest().authenticated());
 		http.authenticationProvider(authenticationProvider());
 		// http.addFilterAfter(authenticationJwtTokenFilter(),
