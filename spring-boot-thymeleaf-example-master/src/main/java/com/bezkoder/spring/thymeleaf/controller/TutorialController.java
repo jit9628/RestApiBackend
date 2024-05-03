@@ -36,6 +36,38 @@ public class TutorialController {
   public String register() {
 	  return "register";
   }
+  @GetMapping("/category")
+  public String getCategory() {
+	  return "addcategory";
+  }
+  
+  @GetMapping("/product")
+  public String getproduct() {
+	  return "addproduct";
+  }
+  
+  @GetMapping("/list")
+  public String getproductList() {
+	  return "productlist";
+  }
+  
+  
+  
+  
+  
+  @GetMapping("/db")
+  public String getDashBoard() {
+	  return "admindashboard";
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
   @GetMapping("/tutorials")
   public String getAll(Model model, @Param("keyword") String keyword) {
     try {
