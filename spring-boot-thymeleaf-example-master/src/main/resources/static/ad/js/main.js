@@ -66,12 +66,12 @@
         data: {
             labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022","2023","2024"],
             datasets: [{
-                    label: "USA",
+                    label: "IN",
                     data: [15, 30, 55, 65, 60, 80, 95,88,64],
                     backgroundColor: "rgba(0, 156, 255, .7)"
                 },
                 {
-                    label: "UK",
+                    label: "CD",
                     data: [8, 35, 40, 60, 70, 55, 75,88,64],
                     backgroundColor: "rgba(0, 156, 255, .5)"
                 },

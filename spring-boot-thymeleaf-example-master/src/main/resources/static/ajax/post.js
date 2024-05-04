@@ -138,11 +138,11 @@ $(document).ready(function() {
 					},
 					data: JSON
 						.stringify({
-							"firstname": "hhghh",
-							"lastname": "shuka",
-							"email": "softwaree831@gmail.com",
+							"firstname": "Access",
+							"lastname": "Area",
+							"email": "access831@gmail.com",
 							"mobile": "962871859",
-							"password": "wrerereerrerer"
+							"password": "access@123"
 						}),
 					success: function(
 						data,
