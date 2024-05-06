@@ -38,6 +38,8 @@
 
 <!-- Template Stylesheet -->
 <link th:href="@{ad/css/style.css}" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
 <body>
@@ -217,6 +219,7 @@
 					style="min-height: 100vh;">
 					<div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-8">
 						<div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+						<form  id="formbody">
 							<div
 								class="d-flex align-items-center justify-content-between mb-3">
 								<h3>Add Product</h3>
@@ -232,6 +235,16 @@
 									placeholder=""> <label for="floatingInput">Product
 									Name</label>
 							</div>
+
+							<div class="form-floating mb-3">
+								<select type="select" class="form-control addvaluselectoption" id="floatingInput">
+								<option value="0">Select Category</option>
+								</select>
+
+
+							</div>
+
+
 							<div class="form-floating mb-3">
 								<input type="text" class="form-control" id="floatingInput"
 									placeholder=""> <label for="floatingInput">Product
@@ -259,6 +272,7 @@
 							</div>
 							<button type="submit" class="btn btn-primary py-3 w-100 mb-4">Add
 								Product</button>
+								</form>
 						</div>
 					</div>
 				</div>
@@ -266,7 +280,8 @@
 			<!-- Sign In End -->
 
 			<!-- Footer Start -->
-						<div class="container-fluid pt-4 px-4" th:replace="fragments/footer :: footer"></div>
+			<div class="container-fluid pt-4 px-4"
+				th:replace="fragments/footer :: footer"></div>
 
 			<!-- Footer End -->
 		</div>
@@ -288,6 +303,9 @@
 	<script src="ad/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 	<!-- Template Javascript -->
 	<script src="ad/js/main.js"></script>
+	<script src="ajax/product.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
 </body>
 
 </html>
